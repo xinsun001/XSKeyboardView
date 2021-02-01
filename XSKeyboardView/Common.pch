@@ -1,0 +1,51 @@
+//
+//  Common.pch
+//  XSKeyboardView
+//
+//  Created by admin on 2021/1/25.
+//
+
+#ifndef Common_pch
+#define Common_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import <Masonry.h>
+#import <MJExtension.h>
+#import <FMDB.h>
+
+
+
+
+
+
+
+//页面的宽高
+#define  ViewAllWidth [UIScreen mainScreen].bounds.size.width
+#define  ViewAllHeight [UIScreen mainScreen].bounds.size.height
+
+
+#define IS_iPhoneX  ( ViewAllWidth >= 375.f &&  ViewAllHeight >= 812.f)||( ViewAllWidth == 414.f &&  ViewAllHeight == 896.f)
+
+// 导航栏高度与tabbar高度
+#define NAVBAR_HEIGHT       (IS_iPhoneX ? 88.0f : 64.0f)
+#define TABBAR_HEIGHT       (IS_iPhoneX ? 83.0f : 49.0f)
+
+#define keyboardH       (IS_iPhoneX ? 34.0f : 0.0f)
+
+
+// 状态栏高度
+#define STATUSBAR_HEIGHT    (IS_iPhoneX ? 44.0f : 20.0f)
+
+#define BottomHeight ( IS_iPhoneX ? (34) : (0))
+#define TopHeight (IS_iPhoneX ? 24 : 0)
+
+#define colorWithValue(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+
+#define weakSet(classSub) __weak typeof(classSub) weakSub=classSub;
+
+
+#endif /* Common_pch */
